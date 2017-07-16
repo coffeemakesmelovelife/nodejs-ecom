@@ -1,0 +1,42 @@
+<% include header %>
+ <div class="main">
+    <div class="content">
+					<h2 class="txt-center red">Passer votre commande: </h2>
+          <div class="contact-form">
+            <form id="commande" method="post" action="/commande">
+              <div>
+                <span><label>Nom et Prénom<span class="red" style="display:inline-block">*</span></label></span>
+                <span><input name="fullName" type="text" class="textbox" required></span>
+              </div>
+              <div>
+                <span><label>E-mail<span class="red" style="display:inline-block">*</span></label></span>
+                <span><input name="userEmail" type="text" class="textbox" required></span>
+              </div>
+              <div>
+                <span><label>Téléphone<span class="red" style="display:inline-block">*</span></label></span>
+                <span><input name="userPhone" type="text" class="textbox" required></span>
+              </div>
+              <div>
+                <span><label>Ville<span class="red" style="display:inline-block">*</span></label></span>
+                <span><input name="userCity" type="text" class="textbox" required></span>
+              </div>
+              <div>
+                <span><label>Adresse</label></span>
+                <span><input name="userAddress" type="text" class="textbox"></span>
+              </div>
+              <div>
+                <span><label>Détails de la commande<span class="red" style="display:inline-block">*</span></label></span>
+                <span><textarea name="userOrder" required></textarea></span>
+              </div>
+             <div>
+                <span><input id="btn-commande" type="submit" value="Commander" class="myButton"></span>
+            </div>
+            </form>
+          </div>
+		   </div>
+						<div class="clear"> </div>
+
+         </div>
+    </div>
+ </div>
+ <% include footer %>

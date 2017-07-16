@@ -1,0 +1,43 @@
+<% include header %>
+   </div>
+ <div class="main">
+    <div class="content">
+      <div class="content_top">
+    		<div class="back-links">
+    		<p><a href="/boutique">Boutique</a> / <a href="/">Page <%= page %></a></p>
+    	    </div>
+    		<div class="clear"></div>
+    	</div>
+      <div class="section group">
+      <% produits.forEach(function(produit, count){ %>
+      <%if(count%4 == 0 && count>0){ %> <%- '</div><div class="section group">' %> <% } %>
+      <div class="grid_1_of_4 images_1_of_4">
+         <a href="/produit/<%= produit.id %>"><img src="<%= produit.img %>" alt=""/></a>
+         <h2><%= produit.nom %></h2>
+        <div class="price-details">
+             <div class="price-number">
+            <p><span class="rupees"><%= produit.prix %> Dhs</span></p>
+            </div>
+                  <div class="add-cart">
+                <h4><a href="/produit/<%= produit.id %>">Acheter</a></h4>
+                 </div>
+             <div class="clear"></div>
+        </div>
+      </div>
+      <% }); %>
+  </div>
+  <div class="content-pagenation">
+						<li><a href="/boutique/?page=1">Frist</a></li>
+						<% for(var i=1; i <= totalPages; i++){ %><li class="<% if(i == page){ %> <%= 'active' %> <%}%>"><a href="/boutique/?page=<%= i %>"><%= i %></a></li><% } %>
+						<li><a href="/boutique/?page=<%= totalPages %>">Last</a></li>
+						<div class="clear"> </div>
+					</div>
+      </div>
+    </div>
+    </div>
+ </div>
+</div>
+<% include footer %>
+<!--
+
+ -->
